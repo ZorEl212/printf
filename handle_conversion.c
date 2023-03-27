@@ -11,7 +11,7 @@
 int (*conv_handler(const char *s, int index))(va_list, char *, unsigned int)
 {
 	print_t pr[] = {
-		{"s", handle_str},
+		{"s", handle_str}, {"c", handle_char},
 		{NULL, NULL},
 	};
 	int i = 0, j = 0, first_index;
