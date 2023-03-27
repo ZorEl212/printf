@@ -11,21 +11,17 @@
 int handle_str(va_list arguments, char *buf, unsigned int ibuf)
 {
 	char *s;
-	size_t len;
+	size_t i;
+	char null[] = "(null)";
 
 	s = va_arg(arguments, char *);
 	if (s == NULL)
 	{
-		len = sizeof("(null)") - 1;
-		memcpy(buf + ibuf, "(null)", len);
-		ibuf += len;
+		for (i = 0; null[i]; i++)
+			ibuf = check_buff(buf, null[i], ibuf);
 		return (6);
 	}
-	else
-	{
-		len = strlen(s);
-		memcpy(buf + ibuf, s, len);
-		ibuf += len;
-	}
-	return (len);
+	for (i = 0; s[i]; i++)
+		ibuf = check_buff(buf, s[i], ibuf);
+	return (i);
 }
