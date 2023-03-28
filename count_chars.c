@@ -16,7 +16,13 @@ int count_chars(const char *s, int index)
 		{" i", handle_sint}, {"+d", handle_pint}, {"+i", handle_pint},
 		{"#d", handle_int}, {"#i", handle_int}, {"+ i", handle_pint},
 		{"+ d", handle_pint}, {" +i", handle_pint},
-		{" +d", handle_pint}, {"b", handle_binary}, {NULL, NULL},
+		{" +d", handle_pint}, {"b", handle_binary}, {"u", handle_uint},
+		{" u", handle_uint}, {"#u", handle_uint}, {"+u", handle_uint}, 
+		{"o", handle_oct}, {"x", handle_hex}, {"X", handle_upx},
+		{"+o", handle_oct}, {"+x", handle_hex}, {"+X", handle_upx},
+		{" o", handle_oct}, {" x", handle_hex}, {" X", handle_upx},
+		{"#o", handle_noct}, {"#x", handle_nhex}, {"#X", handle_nupx},
+		{NULL, NULL},
 	};
 	int i = 0, j = 0, first_index;
 
