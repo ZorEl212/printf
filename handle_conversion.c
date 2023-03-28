@@ -1,3 +1,5 @@
+#include "main.h"
+
 {
 	print_t pr[] = {
 		{"c", handle_chr}, {"s", handle_str},
