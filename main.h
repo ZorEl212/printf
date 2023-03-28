@@ -31,6 +31,9 @@ int handle_perc(va_list a __attribute__((unused)), char *buf, unsigned int i);
 int handle_int(va_list arguments, char *buf, unsigned int ibuf);
 int handle_pint(va_list arguments, char *buf, unsigned int ibuf);
 int handle_sint(va_list arguments, char *buf, unsigned int ibuf);
+int handle_binary(va_list arguments, char *buf, unsigned int ibuf);
+char *fill_binary_array(char *binary, long int int_in, int isneg, int limit);
+
 
 
 #endif
