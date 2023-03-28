@@ -43,6 +43,8 @@ int handle_oct(va_list arguments, char *buf, unsigned int ibuf);
 int handle_noct(va_list arguments, char *buf, unsigned int ibuf);
 int handle_oct(va_list arguments, char *buf, unsigned int ibuf);
 char *fill_oct_array(char *bnr, char *oct);
+int handle_addr(va_list arguments, char *buf, unsigned int ibuf);
+
 
 
 #endif

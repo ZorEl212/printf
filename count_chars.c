@@ -22,7 +22,7 @@ int count_chars(const char *s, int index)
 		{"+o", handle_oct}, {"+x", handle_hex}, {"+X", handle_upx},
 		{" o", handle_oct}, {" x", handle_hex}, {" X", handle_upx},
 		{"#o", handle_noct}, {"#x", handle_nhex}, {"#X", handle_nupx},
-		{NULL, NULL},
+		{" %", handle_perc}, {"p", handle_addr}, {NULL, NULL},
 	};
 	int i = 0, j = 0, first_index;
 
