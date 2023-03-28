@@ -33,7 +33,16 @@ int handle_pint(va_list arguments, char *buf, unsigned int ibuf);
 int handle_sint(va_list arguments, char *buf, unsigned int ibuf);
 int handle_binary(va_list arguments, char *buf, unsigned int ibuf);
 char *fill_binary_array(char *binary, long int int_in, int isneg, int limit);
-
+int handle_uint(va_list arguments, char *buf, unsigned int ibuf);
+int handle_hex(va_list arguments, char *buf, unsigned int ibuf);
+int handle_nhex(va_list arguments, char *buf, unsigned int ibuf);
+char *fill_hex_array(char *bnr, char *hex, int isupp, int limit);
+int handle_nupx(va_list arguments, char *buf, unsigned int ibuf);
+int handle_upx(va_list arguments, char *buf, unsigned int ibuf);
+int handle_oct(va_list arguments, char *buf, unsigned int ibuf);
+int handle_noct(va_list arguments, char *buf, unsigned int ibuf);
+int handle_oct(va_list arguments, char *buf, unsigned int ibuf);
+char *fill_oct_array(char *bnr, char *oct);
 
 
 #endif
