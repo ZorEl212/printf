@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * handle_unt - prints an unsigned int
+ * handle_uint - prints an unsigned int
  * @arguments: number to print
  * @buf: buffer pointer
  * @ibuf: index for buffer pointer
