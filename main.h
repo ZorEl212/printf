@@ -29,5 +29,8 @@ int _putchar(char *buf, unsigned int nbuf);
 int handle_char(va_list arguments, char *buf, unsigned int ibuf);
 int handle_perc(va_list a __attribute__((unused)), char *buf, unsigned int i);
 int handle_int(va_list arguments, char *buf, unsigned int ibuf);
+int handle_pint(va_list arguments, char *buf, unsigned int ibuf);
+int handle_sint(va_list arguments, char *buf, unsigned int ibuf);
+
 
 #endif

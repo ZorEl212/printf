@@ -12,7 +12,11 @@ int count_chars(const char *s, int index)
 {
 	print_t pr[] = {
 		{"s", handle_str}, {"c", handle_char}, {"%", handle_perc},
-		{NULL, NULL},
+		{"d", handle_int}, {"i", handle_int}, { " d", handle_sint},
+		{" i", handle_sint}, {"+d", handle_pint}, {"+i", handle_pint},
+		{"#d", handle_int}, {"#i", handle_int}, {"+ i", handle_pint},
+		{"+ d", handle_pint}, {" +i", handle_pint},
+		{" +d", handle_pint}, {NULL, NULL},
 	};
 	int i = 0, j = 0, first_index;
 
