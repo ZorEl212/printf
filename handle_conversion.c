@@ -10,6 +10,7 @@
  */
 int (*conv_handler(const char *s, int index))(va_list, char *, unsigned int)
 {
+	print_t pr[] = {
 		{"s", handle_str}, {"c", handle_char}, {"%", handle_perc},
 		{"d", handle_int}, {"i", handle_int}, { " d", handle_sint},
 		{" i", handle_sint}, {"+d", handle_pint}, {"+i", handle_pint},
