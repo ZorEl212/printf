@@ -16,7 +16,7 @@ int (*conv_handler(const char *s, int index))(va_list, char *, unsigned int)
 		{" i", handle_sint}, {"+d", handle_pint}, {"+i", handle_pint},
 		{"#d", handle_int}, {"#i", handle_int}, {"+ i", handle_pint},
 		{"+ d", handle_pint}, {" +i", handle_pint},
-		{" +d", handle_pint}, {NULL, NULL},
+		{" +d", handle_pint}, {"b", handle_binary}, {NULL, NULL},
 	};
 	int i = 0, j = 0, first_index;
 
