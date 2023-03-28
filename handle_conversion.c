@@ -1,27 +1,22 @@
-#include "main.h"
-
-
-/**
- * conv_handler - selects the correct function to perform the operation.
- * @s: The format specifier passed to the function.
- * @index: The position of the format specifier in the format string.
- *
- * Return: A pointer to the corresponding function to perform the operation.
- */
-int (*conv_handler(const char *s, int index))(va_list, char *, unsigned int)
 {
 	print_t pr[] = {
-		{"s", handle_str}, {"c", handle_char}, {"%", handle_perc},
-		{"d", handle_int}, {"i", handle_int}, { " d", handle_sint},
-		{" i", handle_sint}, {"+d", handle_pint}, {"+i", handle_pint},
-		{"#d", handle_int}, {"#i", handle_int}, {"+ i", handle_pint},
-		{"+ d", handle_pint}, {" +i", handle_pint},
-		{" +d", handle_pint}, {"b", handle_binary}, {"u", handle_uint},
-		{" u", handle_uint}, {"#u", handle_uint}, {"+u", handle_uint}, 
-		{"o", handle_oct}, {"x", handle_hex}, {"X", handle_upx},
-		{"+o", handle_oct}, {"+x", handle_hex}, {"+X", handle_upx},
-		{" o", handle_oct}, {" x", handle_hex}, {" X", handle_upx},
-		{"#o", handle_noct}, {"#x", handle_nhex}, {"#X", handle_nupx},
+		{"c", handle_chr}, {"s", handle_str},
+		{"i", handle_int}, {"d", handle_int},
+		{"b", handle_bnary}, {"u", handle_uint},
+		{"o", handle_oct}, {"x", handle_hex},
+		{"X", handle_upx}, {"#o", handle_noct},
+		{"#x", handle_nhex}, {"#X", handle_upx},
+		{"#i", handle_int}, {"#d", handle_int},
+		{"#u", handle_uint}, {"+i", handle_pint},
+		{"+d", handle_pint}, {"+u", handle_uint},
+		{"+o", handle_oct}, {"+x", handle_hex},
+		{"+X", print_upx}, {" i", handle_sint},
+		{" d", handle_sint}, {" u", handle_uint},
+		{" o", handle_oct}, {" x", handle_hex},
+		{" X", handle_upx}, {"R", print_rot},
+		{"%", handle_pec},{" +i", handle_pint},
+		{" +d", handle_pint}, {"+ i", handle_pint},
+		{"+ d", handle_pint}, {" %", handle_perc},
 		{NULL, NULL},
 	};
 	int i = 0, j = 0, first_index;
