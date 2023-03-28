@@ -17,7 +17,7 @@ int count_chars(const char *s, int index)
 		{"#d", handle_int}, {"#i", handle_int}, {"+ i", handle_pint},
 		{"+ d", handle_pint}, {" +i", handle_pint},
 		{" +d", handle_pint}, {"b", handle_binary}, {"u", handle_uint},
-		{" u", handle_uint}, {"#u", handle_uint}, {"+u", handle_uint}, 
+		{" u", handle_uint}, {"#u", handle_uint}, {"+u", handle_uint},
 		{"o", handle_oct}, {"x", handle_hex}, {"X", handle_upx},
 		{"+o", handle_oct}, {"+x", handle_hex}, {"+X", handle_upx},
 		{" o", handle_oct}, {" x", handle_hex}, {" X", handle_upx},
