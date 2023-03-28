@@ -21,7 +21,7 @@ int handle_uint(va_list arguments, char *buf, unsigned int ibuf)
 	}
 	for (i = 0; div > 0; div /= 10, i++)
 	{
-		ibuf = check_buf(buf, ((int_in / div) % 10) + '0', ibuf);
+		ibuf = check_buff(buf, ((int_in / div) % 10) + '0', ibuf);
 	}
 	return (i);
 }
